@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floot (YC S25) | William Zhao</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { 'canvas': '#fcfcfc', 'ink': '#1a1a1a', 'subtle': '#8c8c8c' },
+                    fontFamily: { 'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        ::selection { background: #e5e7eb; }
+        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-canvas text-ink font-sans antialiased text-sm flex flex-col min-h-screen">
+
+    <header class="w-full px-10 py-8 flex-none flex justify-between items-center sticky top-0 bg-canvas/80 backdrop-blur-sm z-50">
+        <a href="../index.html" class="hover:opacity-60 transition-opacity">
+            <img src="../media/wz.png" alt="William" class="h-8">
+        </a>
+        <nav>
+            <a href="../index.html" class="text-[10px] uppercase tracking-widest text-subtle hover:text-ink transition-colors">Close</a>
+        </nav>
+    </header>
+
+    <main class="w-full px-10 flex-grow fade-in">
+        <div class="w-full max-w-2xl mx-auto py-12">
+            
+            <header class="mb-12">
+                <h1 class="text-3xl font-normal tracking-tight mb-4">Floot (YC S25)</h1>
+                <p class="text-ink text-lg leading-relaxed max-w-xl">
+                    As a Founding Member, I led UI/UX improvements based on data-driven insights. Focused on optimizing the hero section, simplifying authentication flows, and redesigning paywalls with copywriting tailored to user intent.
+                </p>
+            </header>
+
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12 pb-8 border-b border-gray-100">
+                <div>
+                    <h4 class="text-subtle text-[10px] uppercase tracking-[0.1em] mb-2">Role</h4>
+                    <p class="text-[13px]">Founding Member / Designer</p>
+                </div>
+                <div>
+                    <h4 class="text-subtle text-[10px] uppercase tracking-[0.1em] mb-2">Platform</h4>
+                    <p class="text-[13px]">Desktop / Web</p>
+                </div>
+            </div>
+
+            <section class="mb-20">
+                <!-- Main Image Area -->
+                <div class="bg-gray-100 mb-4 overflow-hidden border border-gray-100">
+                    <img src="../media/floot/hero.png" alt="Floot Interface" class="w-full h-auto object-cover">
+                </div>
+                <p class="text-subtle text-[11px] italic tracking-tight">Fig 01. The redesigned hero section optimized for conversion based on PostHog analytics insights.</p>
+            </section>
+
+            <section class="mb-20">
+                <h3 class="text-xs uppercase tracking-widest text-subtle mb-6">The Challenge</h3>
+                <div class="text-ink text-base leading-relaxed">
+                    <p>
+                        Using PostHog analytics, I identified key friction points in the user journey. The hero section wasn't converting effectively, the authentication flow was unnecessarily complex, and paywalls weren't resonating with user intent. The goal was to improve conversion rates through targeted UI/UX improvements backed by data.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-20">
+                <h3 class="text-xs uppercase tracking-widest text-subtle mb-8">My Work</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">Data-Driven Analysis</h4>
+                        <p class="text-subtle text-sm leading-relaxed">Analyzed user behavior and conversion funnels using PostHog to identify key friction points and opportunities for improvement across the platform.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">Hero Section Redesign</h4>
+                        <p class="text-subtle text-sm leading-relaxed">Redesigned the hero section based on analytics data to improve clarity, messaging, and conversion rates for new users landing on the platform.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">Simplified Authentication</h4>
+                        <p class="text-subtle text-sm leading-relaxed">Streamlined the authentication flow, reducing complexity and friction to create a smoother onboarding experience for users.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">Intent-Based Paywalls</h4>
+                        <p class="text-subtle text-sm leading-relaxed">Redesigned paywall interfaces with copywriting tailored to user intent, improving conversion rates by addressing what users actually need at each stage of their journey.</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="pt-12 border-t border-gray-100 flex justify-between items-center mb-24">
+                <a href="careerloop.html" class="group">
+                    <span class="text-subtle text-[10px] uppercase tracking-widest block mb-1">Next</span>
+                    <span class="text-sm group-hover:underline underline-offset-4 decoration-gray-300">CareerLoop →</span>
+                </a>
+                <a href="../index.html" class="text-subtle hover:text-ink transition-colors text-xs uppercase tracking-widest">Back Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-full px-10 py-8 flex justify-between items-end border-t border-gray-100 text-[11px] text-subtle">
+        <span>© 2025 William Zhao</span>
+        <ul class="flex gap-6">
+            <li><a href="https://github.com/williamzhao7140" target="_blank" class="hover:text-ink transition-colors">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/william-zhao7140/" target="_blank" class="hover:text-ink transition-colors">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
+
