@@ -14,6 +14,14 @@ export const ComponentLibrary: React.FC = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m12 19-7-7 7-7" /><path d="M19 12H5" /></svg>
                     Back to Component Library
                 </button>
+                <div className="w-full mb-10 text-left">
+                    <h1 className="text-3xl font-normal leading-tight mb-3 text-ink">
+                        AI Observability
+                    </h1>
+                    <p className="text-subtle text-base leading-relaxed">
+                        Real-time traces dashboard for monitoring AI agent activity.
+                    </p>
+                </div>
                 <TracesDemo />
             </section>
         );
@@ -31,63 +39,8 @@ export const ComponentLibrary: React.FC = () => {
             </div>
 
             <div className="flex flex-wrap gap-6 w-full">
-                {/* Card 1: Buttons */}
-                <div className="group cursor-pointer block w-[160px]">
-                    <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3 flex items-center justify-center">
-                        <div className="w-20 h-8 bg-ink rounded-md shadow-sm"></div>
-                    </div>
-                    <div className="flex flex-col gap-0.5 text-left">
-                        <h2 className="font-medium text-sm group-hover:underline underline-offset-4 decoration-1 decoration-gray-300">
-                            Buttons
-                        </h2>
-                        <p className="text-subtle text-[11px] uppercase tracking-wide">Components</p>
-                    </div>
-                </div>
-
-                {/* Card 2: Typography */}
-                <div className="group cursor-pointer block w-[160px]">
-                    <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3 flex items-center justify-center flex-col gap-2">
-                        <div className="w-16 h-2 bg-ink rounded-full opacity-80"></div>
-                        <div className="w-12 h-2 bg-ink rounded-full opacity-60"></div>
-                        <div className="w-20 h-2 bg-ink rounded-full opacity-40"></div>
-                    </div>
-                    <div className="flex flex-col gap-0.5 text-left">
-                        <h2 className="font-medium text-sm group-hover:underline underline-offset-4 decoration-1 decoration-gray-300">
-                            Typography
-                        </h2>
-                        <p className="text-subtle text-[11px] uppercase tracking-wide">Styles</p>
-                    </div>
-                </div>
-
-                {/* Card 3: Colors */}
-                <div className="group cursor-pointer block w-[160px]">
-                    <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3 flex items-center justify-center gap-2">
-                        <div className="w-8 h-8 rounded-full bg-ink"></div>
-                        <div className="w-8 h-8 rounded-full bg-subtle"></div>
-                    </div>
-                    <div className="flex flex-col gap-0.5 text-left">
-                        <h2 className="font-medium text-sm group-hover:underline underline-offset-4 decoration-1 decoration-gray-300">
-                            Colors
-                        </h2>
-                        <p className="text-subtle text-[11px] uppercase tracking-wide">System</p>
-                    </div>
-                </div>
-
-                {/* Card 4: Inputs */}
-                <div className="group cursor-pointer block w-[160px]">
-                    <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3 flex items-center justify-center">
-                        <div className="w-24 h-8 border border-gray-300 bg-white rounded-md"></div>
-                    </div>
-                    <div className="flex flex-col gap-0.5 text-left">
-                        <h2 className="font-medium text-sm group-hover:underline underline-offset-4 decoration-1 decoration-gray-300">
-                            Inputs
-                        </h2>
-                        <p className="text-subtle text-[11px] uppercase tracking-wide">Forms</p>
-                    </div>
-                </div>
-
                 {/* Card 5: Traces */}
-                <div 
+                <div
                     className="group cursor-pointer block w-[160px]"
                     onClick={() => setSelectedComponent('traces')}
                 >

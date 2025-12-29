@@ -367,4 +367,3 @@ export const TracesDemo: React.FC = () => {
         </div>
     );
 };
-

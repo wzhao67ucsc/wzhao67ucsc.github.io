@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ href, lightImage, darkImage, title, role }) => {
     return (
-        <Link to={href} className="group cursor-pointer block w-[160px]">
+        <Link to={href} className="group cursor-pointer block w-full sm:w-[calc(50%-12px)] md:w-[160px]">
             <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
                 <img
                     src={lightImage}
