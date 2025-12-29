@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styles if needed, or keep default */
