@@ -15,7 +15,7 @@ export const Work: React.FC = () => {
             </div>
 
             <ProjectCard
-                href="projects/careerloop.html"
+                href="/projects/careerloop"
                 lightImage="/media/light/careerloop.png"
                 darkImage="/media/dark/dark_careerloop.png"
                 title="CareerLoop"
@@ -23,7 +23,7 @@ export const Work: React.FC = () => {
             />
 
             <ProjectCard
-                href="projects/floot.html"
+                href="/projects/floot"
                 lightImage="/media/light/floot.png"
                 darkImage="/media/dark/dark_floot.png"
                 title="Floot (YC S25)"
@@ -31,7 +31,7 @@ export const Work: React.FC = () => {
             />
 
             <ProjectCard
-                href="projects/monotone.html"
+                href="/projects/monotone"
                 lightImage="/media/light/monotone.png"
                 darkImage="/media/dark/dark_monotone.png"
                 title="Monotone"

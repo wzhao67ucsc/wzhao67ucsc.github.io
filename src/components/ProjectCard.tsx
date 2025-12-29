@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
     href: string;
@@ -10,7 +11,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ href, lightImage, darkImage, title, role }) => {
     return (
-        <a href={href} className="group cursor-pointer block w-[160px]">
+        <Link to={href} className="group cursor-pointer block w-[160px]">
             <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
                 <img
                     src={lightImage}
@@ -29,6 +30,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ href, lightImage, dark
                 </h2>
                 <p className="text-subtle text-[11px] uppercase tracking-wide">{role}</p>
             </div>
-        </a>
+        </Link>
     );
 };
