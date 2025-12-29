@@ -1,16 +1,20 @@
 import React from 'react';
 
 interface ProjectCardProps {
-    href: string;
+    href?: string;
+    onClick?: () => void;
     lightImage: string;
     darkImage: string;
     title: string;
     role: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ href, lightImage, darkImage, title, role }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ href, onClick, lightImage, darkImage, title, role }) => {
+    const Component = href ? 'a' : 'div';
+    const props = href ? { href } : { onClick };
+
     return (
-        <a href={href} className="group cursor-pointer block w-[160px]">
+        <Component {...props} className="group cursor-pointer block w-[160px]">
             <div className="relative w-full aspect-[3/4] bg-gray-100 overflow-hidden mb-3">
                 <img
                     src={lightImage}
@@ -29,6 +33,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ href, lightImage, dark
                 </h2>
                 <p className="text-subtle text-[11px] uppercase tracking-wide">{role}</p>
             </div>
-        </a>
+        </Component>
     );
 };

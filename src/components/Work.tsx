@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ProjectCard } from './ProjectCard';
+import { ProjectDetail } from './ProjectDetail';
+import { ProjectView } from './ProjectView';
+import { projects, getProjectById } from '../data/projectsData';
 
 export const Work: React.FC = () => {
+    const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
+
+    const selectedProject = selectedProjectId ? getProjectById(selectedProjectId) : null;
+
+    if (selectedProject) {
+        return (
+            <ProjectDetail onBack={() => setSelectedProjectId(null)}>
+                <ProjectView
+                    project={selectedProject}
+                    onBack={() => setSelectedProjectId(null)}
+                    onNavigate={(id) => setSelectedProjectId(id)}
+                />
+            </ProjectDetail>
+        );
+    }
+
     return (
         <section className="flex flex-wrap gap-6 w-full animate-fade-in">
             <div className="w-full mb-10 text-left">
@@ -14,29 +33,16 @@ export const Work: React.FC = () => {
                 </p>
             </div>
 
-            <ProjectCard
-                href="projects/careerloop.html"
-                lightImage="/media/light/careerloop.png"
-                darkImage="/media/dark/dark_careerloop.png"
-                title="CareerLoop"
-                role="Founder"
-            />
-
-            <ProjectCard
-                href="projects/floot.html"
-                lightImage="/media/light/floot.png"
-                darkImage="/media/dark/dark_floot.png"
-                title="Floot (YC S25)"
-                role="Founding Member"
-            />
-
-            <ProjectCard
-                href="projects/monotone.html"
-                lightImage="/media/light/monotone.png"
-                darkImage="/media/dark/dark_monotone.png"
-                title="Monotone"
-                role="Founding Designer"
-            />
+            {projects.map((project) => (
+                <ProjectCard
+                    key={project.id}
+                    onClick={() => setSelectedProjectId(project.id)}
+                    lightImage={project.cardImage.light}
+                    darkImage={project.cardImage.dark}
+                    title={project.title}
+                    role={project.role}
+                />
+            ))}
         </section>
     );
 };

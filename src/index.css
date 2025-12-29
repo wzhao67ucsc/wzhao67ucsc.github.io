@@ -4,4 +4,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar styles if needed, or keep default */
+/* Hide scrollbar but keep scrolling */
+main {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+}
+
+main::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
